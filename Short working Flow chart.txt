@@ -1,0 +1,60 @@
+Start
+|
+|--- Data Preprocessing:
+|     |
+|     |-- Handling Categorical Variables:
+|     |      |
+|     |      |-- Replace 'No internet service' with 'No' for selected features
+|     |      |-- Replace 'No phone service' with 'No' for 'MultipleLines' feature
+|     |
+|     |-- Handling Special Cases
+|     |      |
+|     |      |-- Replace special cases in categorical variables
+|     |
+|     |-- Data Encoding
+|     |      |
+|     |      |-- Encode categorical variables using LabelEncoder
+|     |
+|     |-- Handling Missing Values
+|   
+|--- Data Visualization:
+|     |
+|     |-- Countplot for 'Churn' distribution
+|     |
+|     |-- Correlation Matrix Heatmap
+|
+|--- Feature Scaling and Dimensionality Reduction:
+|     |
+|     |-- StandardScaler to standardize features
+|     |
+|     |-- Principal Component Analysis (PCA) for dimensionality reduction
+|     |
+|     |-- Calculation of Explained Variance Ratio
+|
+|--- Model Training and Evaluation:
+|     |
+|     |-- SMOTEENN Sampling:
+|     |      |
+|     |      |-- Resampling of dataset using SMOTEENN to address class imbalance
+|     |
+|     |-- For each Model:
+|     |      |
+|     |      |-- Construct Pipeline:
+|     |      |       |
+|     |      |       |-- Feature Scaling (MinMaxScaler)
+|     |      |       |-- Model (e.g., RandomForestClassifier)
+|     |      |       |-- Hyperparameter Tuning (GridSearchCV)
+|     |      |
+|     |      |-- Train Pipeline on Resampled Training Data
+|     |      |
+|     |      |-- Evaluate Pipeline on Resampled Test Data:
+|     |               |
+|     |               |-- Calculate Accuracy
+|     |               |-- Generate Classification Report
+|     |               |-- Plot Confusion Matrix
+|     |
+|     |-- Compare Model Performances
+|     |
+|     |-- Select Optimal Model based on Evaluation Metrics
+|
+|--- End
